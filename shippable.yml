@@ -9,7 +9,10 @@ services:
   - postgres 
   - rabbitmq 
   - redis  
-  - selenium 
+  - selenium
+  
+runtime:
+  nodePool: Arm64
   
 build:
   pre_ci_boot:
