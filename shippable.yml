@@ -1,0 +1,29 @@
+language: none
+   
+services:
+  - couchdb 
+  - elasticsearch 
+  - memcached 
+  - mongodb 
+  - neo4j 
+  - postgres 
+  - rabbitmq 
+  - redis  
+  - selenium 
+  
+build:
+  pre_ci_boot:
+    image_name: drydock/aarch64_u16all
+    image_tag: master
+    pull: true
+    
+  ci:
+     - elasticsearch --version
+     - memcached -V
+     - mongod --version
+     - /var/lib/neo4j/bin/neo4j version
+     - psql --version
+     - dpkg -s rabbitmq-server | grep Version
+     - java -jar /usr/local/selenium/selenium-server-standalone-3.11.0.jar --version
+     - sqlite3 --version
+     - couchdb -V
