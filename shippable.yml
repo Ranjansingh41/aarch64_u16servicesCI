@@ -30,3 +30,4 @@ build:
      - java -jar /usr/local/selenium/selenium-server-standalone-3.11.0.jar --version
      - sqlite3 --version
      - couchdb -V
+     - pip show pycrypto
