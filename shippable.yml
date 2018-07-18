@@ -2,7 +2,7 @@ language: none
    
 services:
   - couchdb 
-  #- elasticsearch 
+  - elasticsearch 
   - memcached 
   - mongodb 
   - neo4j 
